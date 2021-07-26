@@ -36,6 +36,7 @@ dependencies {
     // AndroidX
     implementation("androidx.core:core-ktx:1.6.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("androidx.fragment:fragment-ktx:1.3.6")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
 
     // Material Design
