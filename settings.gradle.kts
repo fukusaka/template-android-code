@@ -1,2 +1,3 @@
 rootProject.name = "AndroidCodeSample"
-include ':app'
+
+include(":app")
