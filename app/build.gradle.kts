@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -35,6 +37,12 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
+val hilt_version: String by rootProject.extra
+
 dependencies {
     // AndroidX
     implementation("androidx.core:core-ktx:1.6.0")
@@ -44,6 +52,10 @@ dependencies {
 
     // Material Design
     implementation("com.google.android.material:material:1.4.0")
+
+    // Hilt Android
+    implementation("com.google.dagger:hilt-android:$hilt_version")
+    kapt("com.google.dagger:hilt-compiler:$hilt_version")
 
     // Unit Test
     testImplementation("junit:junit:4.13.2")
