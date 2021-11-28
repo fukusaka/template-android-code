@@ -26,13 +26,6 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
 task<Delete>("clean") {
     group = "cli"
     delete = setOf(rootProject.buildDir)
