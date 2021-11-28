@@ -8,7 +8,7 @@ plugins {
 buildscript {
     val kotlin_version by extra("1.5.21")
     val ktlint_version by extra("0.41.0")
-    val hilt_version by extra("2.38")
+    val hilt_version by extra("2.38.1")
 
     repositories {
         google()
