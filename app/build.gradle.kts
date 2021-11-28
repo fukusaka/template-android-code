@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdkVersion(31)
     buildToolsVersion("30.0.3")
 
     defaultConfig {
@@ -45,10 +45,10 @@ val hilt_version: String by rootProject.extra
 
 dependencies {
     // AndroidX
-    implementation("androidx.core:core-ktx:1.6.0")
-    implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("androidx.fragment:fragment-ktx:1.3.6")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.appcompat:appcompat:1.4.0")
+    implementation("androidx.fragment:fragment-ktx:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.2")
 
     // Material Design
     implementation("com.google.android.material:material:1.4.0")
