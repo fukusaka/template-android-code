@@ -2,12 +2,12 @@
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id("org.jlleitschuh.gradle.ktlint") version "10.1.0" apply true
+    id("org.jlleitschuh.gradle.ktlint") version "10.0.0" apply true
 }
 
 buildscript {
     val kotlin_version by extra("1.6.0")
-    val ktlint_version by extra("0.41.0")
+    val ktlint_version by extra("0.40.0")
     val hilt_version by extra("2.40.2")
 
     repositories {
@@ -35,13 +35,14 @@ subprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
     val ktlint_version: String by rootProject.extra
 
-    ktlint {
+    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
         version.set(ktlint_version)
         debug.set(false)
         verbose.set(true)
         android.set(true)
         outputToConsole.set(true)
         outputColorName.set("RED")
+        ignoreFailures.set(true)
         enableExperimentalRules.set(true)
         reporters {
             reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.CHECKSTYLE)
