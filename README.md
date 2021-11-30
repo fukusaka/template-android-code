@@ -7,7 +7,7 @@ template-android-code
 * Android Architecture Component 構成に変更
 * Dagger Hilt にて依存関係インジェクション
 * ktlint の追加
-
+* dataBinding/viewBinding デリゲート関数を追加
 
 参考
 ---
