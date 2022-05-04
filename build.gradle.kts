@@ -1,16 +1,19 @@
-@file:Suppress("LocalVariableName")
-
-buildscript {
-    val hilt_version by extra("2.41")
-}
+// ref https://youtrack.jetbrains.com/issue/KTIJ-19369
+@Suppress(
+    "DSL_SCOPE_VIOLATION",
+    "MISSING_DEPENDENCY_CLASS",
+    "UNRESOLVED_REFERENCE_WRONG_RECEIVER",
+    "FUNCTION_CALL_EXPECTED"
+)
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id("com.android.application") version "7.1.3" apply false
-    id("com.android.library") version "7.1.3" apply false
-    kotlin("android") version "1.6.21" apply false
-    id("com.google.dagger.hilt.android") version "2.41" apply false
-    id("org.jlleitschuh.gradle.ktlint") version "10.3.0" apply true
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.hilt.android) apply false
+    // kotlin("android") version "1.6.21" apply false
+    alias(libs.plugins.ktlint) apply true
 }
 
 task<Delete>("clean") {
@@ -21,8 +24,8 @@ task<Delete>("clean") {
 subprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
 
-    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
-        version.set("0.45.2")
+    ktlint {
+        version.set(rootProject.libs.versions.ktlint.get())
         debug.set(false)
         verbose.set(true)
         android.set(true)
