@@ -1,8 +1,10 @@
+@file:Suppress("LocalVariableName")
+
 plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-    id("dagger.hilt.android.plugin")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -45,8 +47,6 @@ kapt {
     correctErrorTypes = true
 }
 
-val hilt_version: String by rootProject.extra
-
 dependencies {
     // AndroidX
     implementation("androidx.core:core-ktx:1.7.0")
@@ -58,6 +58,7 @@ dependencies {
     implementation("com.google.android.material:material:1.5.0")
 
     // Hilt Android
+    val hilt_version: String by rootProject.extra
     implementation("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-compiler:$hilt_version")
 

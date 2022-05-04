@@ -1,29 +1,16 @@
 @file:Suppress("LocalVariableName")
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-    id("org.jlleitschuh.gradle.ktlint") version "10.0.0" apply true
+buildscript {
+    val hilt_version by extra("2.41")
 }
 
-buildscript {
-    val kotlin_version by extra("1.6.0")
-    val ktlint_version by extra("0.40.0")
-    val hilt_version by extra("2.41")
-
-    repositories {
-        google()
-        mavenCentral()
-        // maven("https://plugins.gradle.org/m2/")
-    }
-
-    dependencies {
-        classpath("com.android.tools.build:gradle:7.1.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
-        classpath("com.google.dagger:hilt-android-gradle-plugin:$hilt_version")
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id("com.android.application") version "7.1.3" apply false
+    id("com.android.library") version "7.1.3" apply false
+    kotlin("android") version "1.6.21" apply false
+    id("com.google.dagger.hilt.android") version "2.41" apply false
+    id("org.jlleitschuh.gradle.ktlint") version "10.3.0" apply true
 }
 
 task<Delete>("clean") {
@@ -33,10 +20,9 @@ task<Delete>("clean") {
 
 subprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
-    val ktlint_version: String by rootProject.extra
 
     configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
-        version.set(ktlint_version)
+        version.set("0.45.2")
         debug.set(false)
         verbose.set(true)
         android.set(true)
