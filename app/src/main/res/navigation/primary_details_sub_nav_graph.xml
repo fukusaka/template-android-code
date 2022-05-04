@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@+id/nav_graph_details"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_student_detail"
+    >
+    <fragment
+        android:id="@+id/fragment_student_detail"
+        android:name="com.example.android.codesampleapp.ui.StudentDetailFragment"
+        android:label="@string/title_student_detail"
+        tools:layout="@layout/fragment_student_detail"
+        >
+        <argument
+            android:name="item_id"
+            android:defaultValue=""
+            app:argType="string"
+            />
+    </fragment>
+
+</navigation>

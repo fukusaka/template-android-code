@@ -60,6 +60,11 @@ dependencies {
     // Hilt Android
     val hilt_version: String by rootProject.extra
     implementation("com.google.dagger:hilt-android:$hilt_version")
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.4.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.4.2")
     kapt("com.google.dagger:hilt-compiler:$hilt_version")
 
     // Unit Test
