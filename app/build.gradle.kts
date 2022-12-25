@@ -8,13 +8,13 @@ plugins {
 }
 
 android {
-    compileSdk = 31
-    buildToolsVersion = "30.0.3"
+    compileSdk = 33
+    buildToolsVersion = "33.0.1"
 
     defaultConfig {
         applicationId = "com.example.android.codesampleapp"
         minSdk = 24
-        targetSdk = 30
+        targetSdk = 32
         versionCode = 1
         versionName = "1.0"
 
