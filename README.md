@@ -3,8 +3,8 @@ template-android-code
 
 * Android Studio にて新規に Empty Activity プロジェクト作成
 * gradle の構成を Kotlin DSL に変更
-* AGP 7.3.1/gradle 7.4 に更新
-* Kotlin 1.7.20 に更新
+* AGP 8.2.0/gradle 8.2 に更新
+* Kotlin 1.9.21 に更新
 * Android Architecture Component 構成に変更
 * Dagger Hilt にて依存関係インジェクション
 * ktlint の追加
