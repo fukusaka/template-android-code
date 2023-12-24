@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    namespace = "com.example.android.codesampleapp"
     compileSdk = 33
     buildToolsVersion = "33.0.1"
 
