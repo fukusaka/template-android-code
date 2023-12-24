@@ -5,6 +5,7 @@ template-android-code
 * gradle の構成を Kotlin DSL に変更
 * AGP 8.2.0/gradle 8.2 に更新
 * Kotlin 1.9.21 に更新
+* KSP に移行
 * Android Architecture Component 構成に変更
 * Dagger Hilt にて依存関係インジェクション
 * ktlint の追加

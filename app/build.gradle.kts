@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    kotlin("kapt")
+    id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
 }
 
@@ -41,10 +41,6 @@ android {
     }
 }
 
-kapt {
-    correctErrorTypes = true
-}
-
 dependencies {
     // AndroidX
     implementation(libs.androidx.core.ktx)
@@ -57,7 +53,7 @@ dependencies {
 
     // Hilt Android
     implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
     // Unit Test
     testImplementation(libs.bundles.testDependencies)
