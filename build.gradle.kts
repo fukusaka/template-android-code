@@ -33,6 +33,7 @@ subprojects {
         ignoreFailures.set(true)
         enableExperimentalRules.set(true)
         reporters {
+            reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.PLAIN)
             reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.CHECKSTYLE)
         }
     }
