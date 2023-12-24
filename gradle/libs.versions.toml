@@ -2,7 +2,7 @@
 kotlin = "1.7.20"
 ktlint = "0.45.2"
 hilt = "2.44.2"
-android-gradle-plugins = "7.4.2"
+android-gradle-plugins = "8.0.2"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugins" }
