@@ -24,7 +24,7 @@ subprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
 
     ktlint {
-        version.set(rootProject.libs.versions.ktlint.get())
+        version.set(rootProject.libs.versions.ktlint.version.get())
         debug.set(false)
         verbose.set(true)
         android.set(true)
